@@ -2,3 +2,5 @@
 *.o
 *.out
 *.compiled.s
+out
+.gdb_history
