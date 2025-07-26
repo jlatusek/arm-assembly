@@ -1,7 +1,7 @@
 .PHONY: all run debug
 
 CC := arm-unknown-linux-gnueabi-cc
-CFLAGS += -O0 -znoexecstack -g -mthumb
+CFLAGS += -O0 -znoexecstack -g -mthumb -mcpu=cortex-a7
 ASMFLAGS := 
 
 OUT_DIR := out

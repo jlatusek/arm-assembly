@@ -6,6 +6,8 @@ unsigned int a;
 
 extern int __attribute__((naked)) add(int a, int b);
 extern int __attribute__((naked)) substract(int a, int b);
+extern int __attribute__((naked)) multiply(int a, int b);
+extern int __attribute__((naked)) divide(int a, int b);
 
 int main(int argc, char *argv[])
 {
@@ -20,6 +22,12 @@ int main(int argc, char *argv[])
         break;
     case '-':
         result = substract(aa, bb);
+        break;
+    case '!':
+        result = multiply(aa, bb);
+        break;
+    case '/':
+        result = divide(aa, bb);
         break;
     }
     printf("result: %d\n", result);
