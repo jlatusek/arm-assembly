@@ -4,3 +4,4 @@
 *.compiled.s
 out
 .gdb_history
+*.core
