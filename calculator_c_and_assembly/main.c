@@ -8,28 +8,20 @@ extern int __attribute__((naked)) add(int a, int b);
 extern int __attribute__((naked)) substract(int a, int b);
 extern int __attribute__((naked)) multiply(int a, int b);
 extern int __attribute__((naked)) divide(int a, int b);
+extern int __attribute__((naked)) calculator(char *input, int len);
 
 int main(int argc, char *argv[])
 {
-    int aa = atoi(argv[1]);
-    char operator= argv[2][0];
-    int bb = atoi(argv[3]);
+    char buffer[256] = {};
     int result = 0;
-    switch (operator)
+    printf(">: ");
+    if (fgets(buffer, sizeof(buffer), stdin) == NULL)
     {
-    case '+':
-        result = add(aa, bb);
-        break;
-    case '-':
-        result = substract(aa, bb);
-        break;
-    case '!':
-        result = multiply(aa, bb);
-        break;
-    case '/':
-        result = divide(aa, bb);
-        break;
+        printf("Please give me some input next time ;))");
+        return -1;
     }
+    result = calculator(buffer, strlen(buffer));
+
     printf("result: %d\n", result);
     return 0;
 }
