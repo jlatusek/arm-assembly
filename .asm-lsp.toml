@@ -1,0 +1,13 @@
+[default_config]
+version = "0.10.0"
+assembler = "gas"
+instruction_set = "arm"
+
+[default_config.opts]
+compiler = "arm-unknown-linux-gnueabi-gcc"
+compile_flags_txt = [
+    "-mthumb",
+    "-mcpu=cortex-a7",
+]
+diagnostics = true
+default_diagnostics = false
