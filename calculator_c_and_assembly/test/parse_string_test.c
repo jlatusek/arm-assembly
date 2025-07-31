@@ -12,10 +12,10 @@ int main(int argc, char *argv[])
     unsigned int len = strlen(buffer);
     int a = 0;
     int b = 0;
-    char operator= 0;
+    char operator= 0xAA;
     int result;
     parse_string(buffer, len, &a, &b, &operator);
-    printf("%d %c %d\n", a, b, operator);
+    printf("%d %d %c\n", a, b, operator);
 
     printf("result: %d\n", result);
     return 0;
